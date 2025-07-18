@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Organización de Archivos de Gestión - Alcaldía Municipal de Cajamarca</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Encabezado con logo -->
+  <header class="header">
+    <div class="container">
+      <div class="header__content">
+        <div class="header__logo">
+          <img src="LOGO.jpg" alt="Logo Alcaldía Municipal de Cajamarca" class="logo">
+        </div>
+        <div class="header__text">
+          <h1 class="header__title">ALCALDÍA MUNICIPAL DE CAJAMARCA - TOLIMA</h1>
+          <h2 class="header__subtitle">ORGANIZACIÓN DE ARCHIVOS DE GESTIÓN</h2>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Contenido principal -->
+  <main class="main">
+    <div class="container">
+      <!-- Navegación -->
+      <nav class="navigation" id="navigation">
+        <button class="btn btn--secondary" id="prevBtn" onclick="goToPrevStep()">⬅ Anterior</button>
+        <div class="progress-container">
+          <div class="progress-bar">
+            <div class="progress-fill" id="progressFill"></div>
+          </div>
+          <span class="progress-text" id="progressText">Paso 1/10</span>
+        </div>
+        <button class="btn btn--secondary" id="nextBtn" onclick="goToNextStep()">Siguiente ➡</button>
+      </nav>
+
+      <!-- Vista general de pasos -->
+      <section class="steps-overview" id="stepsOverview">
+        <h2>10 Pasos para la Organización de Archivos de Gestión</h2>
+        <div class="steps-grid" id="stepsGrid"></div>
+        
+        <!-- Botones de acción -->
+        <div class="action-buttons">
+          <button class="btn btn--primary" id="downloadBtn" onclick="downloadPDF()">📄 Descargar PDF</button>
+          <button class="btn btn--outline" id="printBtn" onclick="printGuide()">🖨️ Imprimir Guía</button>
+        </div>
+      </section>
+
+      <!-- Vista de detalle -->
+      <section class="step-detail hidden" id="stepDetail">
+        <div class="step-detail__header">
+          <div class="step-detail__number" id="stepNumber">1</div>
+          <div class="step-detail__content">
+            <h2 id="stepTitle">IDENTIFICAR</h2>
+            <p class="step-detail__subtitle" id="stepSubtitle">Series y Subseries según TRD Municipal</p>
+          </div>
+        </div>
+        
+        <div class="step-detail__description" id="stepDescription">
+          Descripción del paso
+        </div>
+        
+        <div class="step-detail__details" id="stepDetailsSection">
+          <h3>Detalles del Proceso</h3>
+          <ul id="stepDetailsList"></ul>
+        </div>
+        
+        <div class="step-detail__examples" id="stepExamplesSection">
+          <h3>Ejemplos Prácticos</h3>
+          <ul id="stepExamplesList"></ul>
+        </div>
+        
+        <div class="step-actions">
+          <button class="btn btn--outline" onclick="showStepsOverview()">↩️ Volver a Vista General</button>
+          <button class="btn btn--primary" onclick="printGuide()">🖨️ Imprimir Paso</button>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Pie de página con contacto actualizado -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <h3>ALCALDÍA MUNICIPAL DE CAJAMARCA</h3>
+        <p class="footer__department">SECRETARÍA GENERAL Y DE GOBIERNO - GRUPO DE ARCHIVO CENTRAL</p>
+        <p class="footer__email">✉️ camilog_1306@hotmail.com</p>
+        
+        <div class="footer__legal">
+          <h4>Marco Normativo</h4>
+          <ul>
+            <li>Ley 594 de 2000 - Ley General de Archivos</li>
+            <li>Decreto 1080 de 2015 - Decreto Único Reglamentario del Sector Cultura</li>
+            <li>Acuerdo AGN 001 de 2024 - Acuerdo Único de la Función Archivística</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
